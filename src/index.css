@@ -5,8 +5,9 @@
 @tailwind utilities;
 
 body {
-  background-color: #1d2732;
-  color: #ffff;
+  /* background-color: #1d2732; */
+  background-color: #e4eef8;
+  /* color: #ffff; */
   overflow-x: hidden;
 }
 /* Firefox */
