@@ -1,0 +1,23 @@
+PAGES
+========================
+1.Login Page
+    -Input field for username.
+    -Input field for password.
+    -Button for submitting login details.
+    -(Optional) Links for "Forgot Password" and "Sign Up".
+
+2.Dashboard
+    ->Data Upload Form
+        -Fields to input or upload dummy data.
+        -Submit button for data upload.
+        -Confirmation message after successful upload.
+
+    ->Data Cards
+        -Display of uploaded data in card format.
+        -Each card showing key details of the data.
+        -(Optional) Buttons for editing or deleting data.
+
+    ->Search Bar
+        -Input field for searching within the uploaded data.
+        -Dynamic display of search results.
+        -Message for "No Results Found" if applicable.
