@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "../../style";
 
 import hero from "../../assets/images/hero.avif";
+import Card from "../../components/card/Card";
 
 const Dashboard = () => {
   const [data, setData] = useState([]);
@@ -26,20 +27,7 @@ const Dashboard = () => {
   );
 
   return (
-    <div className="dashboard h-screen">
-      {/* Data Upload Form */}
-      {/* <div className="data-upload-form">
-        <form onSubmit={handleUpload}>
-          <input
-            type="text"
-            value={uploadInput}
-            onChange={(e) => setUploadInput(e.target.value)}
-            placeholder="Enter data"
-          />
-          <button type="submit">Upload Data</button>
-        </form>
-      </div> */}
-
+    <div className="dashboard">
       {/* Search Bar */}
       {/* <div className="search-bar">
         <input
@@ -94,6 +82,24 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="formSection">
+        {" "}
+        {/* Data Upload Form */}
+        <div className="data-upload-form">
+          <form onSubmit={handleUpload}>
+            <input
+              type="text"
+              value={uploadInput}
+              onChange={(e) => setUploadInput(e.target.value)}
+              placeholder="Enter data"
+            />
+            <button type="submit">Upload Data</button>
+          </form>
+        </div>
+      </div>
+      <div className="cardSection">
+        <Card data={filteredData} />
       </div>
     </div>
   );
