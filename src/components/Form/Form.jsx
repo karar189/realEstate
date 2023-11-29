@@ -7,7 +7,7 @@ const Form = ({ uploadInput, setUploadInput, handleUpload }) => {
     <div className="formSection mt-20">
       <div
         id="upload"
-        className={`data-upload-form ${styles.marginX} ${styles.marginY}  flex justify-between `}
+        className={`data-upload-form ${styles.marginX} ${styles.marginY}  flex md:flex-row flex-col justify-between `}
       >
         <form onSubmit={handleUpload} className="flex flex-col ">
           <h1 className={`${styles.subheading} text-amber-400 mb-4 font-bold`}>
@@ -20,7 +20,7 @@ const Form = ({ uploadInput, setUploadInput, handleUpload }) => {
               setUploadInput({ ...uploadInput, title: e.target.value })
             }
             placeholder="Enter title"
-            className="px-4 py-3 w-[500px] rounded-xl"
+            className="px-4 py-3 md:w-[500px] rounded-xl"
             required
           />
           <br />
@@ -30,7 +30,7 @@ const Form = ({ uploadInput, setUploadInput, handleUpload }) => {
               setUploadInput({ ...uploadInput, description: e.target.value })
             }
             placeholder="Enter description"
-            className="px-4 py-3 w-[500px] rounded-xl"
+            className="px-4 py-3 md:w-[500px] rounded-xl"
             maxLength="250"
             required
           />
@@ -42,22 +42,22 @@ const Form = ({ uploadInput, setUploadInput, handleUpload }) => {
               setUploadInput({ ...uploadInput, price: e.target.value })
             }
             placeholder="Enter price"
-            className="px-4 py-3 w-[500px] rounded-xl"
+            className="px-4 py-3 md:w-[500px] rounded-xl"
             required
           />
           <br />
           <button
-            className="px-4 py-3 w-[500px] rounded-xl bg-amber-400 text-black font-bold"
+            className="px-4 py-3 md:w-[500px] rounded-xl bg-amber-400 text-black font-bold"
             type="submit"
           >
             Upload Data
           </button>
         </form>
-        <div className="pr-32">
+        <div className="md:pr-32 md:pb-0 pb-10">
           {" "}
-          <div className="image-section flex flex-col  divide-y divide-amber-400">
+          <div className="image-section flex flex-col md:mt-0 mt-10  divide-y divide-amber-400">
             <div className="flex w-full  divide-x divide-amber-400">
-              <div className="  px-[68px]  py-12 flex flex-col">
+              <div className="  md:px-[68px] px-[54.5px]  py-12 flex flex-col">
                 <h2 className={`${styles.logo} saonara`}>$ 3Bn + </h2>
                 <p className={`${styles.paragraph} text-white`}>
                   Combined <br />

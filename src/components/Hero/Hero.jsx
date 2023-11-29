@@ -8,7 +8,7 @@ const Hero = ({ searchTerm, handleSearch }) => {
     <div>
       <div className="heroSection ">
         <div
-          className={`bg-[#073a55] flex sm:flex-row ss:flex-col justify-between ${styles.marginX}  ${styles.paddingX} ${styles.paddingY} h-[80vh] rounded-3xl `}
+          className={`bg-[#073a55] flex sm:flex-row ss:flex-col justify-between ${styles.marginX}  ${styles.paddingX} ${styles.paddingY} md:h-[80vh] rounded-3xl `}
         >
           <div className="texts">
             <h1 className={`${styles.heading} text-white`}>
@@ -24,13 +24,13 @@ const Hero = ({ searchTerm, handleSearch }) => {
                 value={searchTerm}
                 onChange={handleSearch}
                 placeholder="Search Property"
-                className="px-4 py-6 md:w-[800px] w-[380px] rounded-xl absolute z-10"
+                className="px-4 md:py-6 py-3 md:w-[800px] w-[300px] rounded-xl absolute z-10"
               />
             </div>
             <a href="#upload">
               {" "}
               <p
-                className={`${styles.subheading} text-[#073a55] md:mt-40 mt-36 bg-amber-400 rounded-xl py-3 w-96 px-4`}
+                className={`${styles.subheading} text-[#073a55] md:mt-40 mt-28 bg-amber-400 rounded-xl py-3 md:w-96 px-4`}
               >
                 <b>Or,</b> Add Your Own Listing Today!
               </p>
@@ -41,7 +41,7 @@ const Hero = ({ searchTerm, handleSearch }) => {
               <img
                 src={hero}
                 alt="image"
-                className=" w-[30rem] md:h-[40rem] h-[20rem] mx-auto p-2 rounded-2xl object-cover -mt-4"
+                className=" w-[30rem] md:h-[40rem] h-[20rem] mx-auto p-2 rounded-2xl object-cover md:mt-0 mt-10"
               />
             </div>
           </div>

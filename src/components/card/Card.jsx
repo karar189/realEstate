@@ -6,7 +6,7 @@ const Card = ({ data }) => {
   return (
     <>
       <div
-        className={`${styles.marginX} card-container grid grid-cols-3 gap-20 w-full `}
+        className={`${styles.marginX} card-container md:grid md:grid-cols-3 flex flex-wrap gap-20 w-full `}
       >
         {data.length > 0 ? (
           data.map((item) => (
@@ -31,8 +31,8 @@ const Card = ({ data }) => {
         )}
       </div>
       {/* dummy data */}
-      <div className="flex">
-        <div className={`${styles.marginX} card-container flex  flex-wrap`}>
+      <div className="flex flex-wrap mb-60">
+        <div className={`${styles.marginX} card-container flex flex-wrap`}>
           <div className={` ${styles.marginY} `}>
             <div className="card w-80">
               <img
