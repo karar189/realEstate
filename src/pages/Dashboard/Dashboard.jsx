@@ -46,7 +46,7 @@ const Dashboard = () => {
               Embark on captivating tours to discover the <br /> perfect
               residence for you and your family
             </p>
-            <div className="searchbar mt-20 shadow-xl">
+            <div className="searchbar mt-10 shadow-xl">
               <input
                 type="text"
                 value={searchTerm}
@@ -55,6 +55,11 @@ const Dashboard = () => {
                 className="px-4 py-6 w-[800px] rounded-xl absolute z-10"
               />
             </div>
+            <p
+              className={`${styles.subheading} text-[#073a55] mt-40 bg-amber-400 rounded-xl py-3 w-96 px-4`}
+            >
+              <b>Or,</b> Add Your Own Listing Today!
+            </p>
           </div>
           <div className="image  relative">
             <div className="bg-white  rounded-2xl shadow-2xl">
