@@ -23,8 +23,8 @@ const Login = ({ onLogin }) => {
 
   return (
     <div class="flex flex-wrap mt-20 w-full content-center justify-center">
-      <div class="flex shadow-md">
-        <div class="flex flex-wrap content-center justify-center rounded-l-3xl bg-white w-[24rem] h-[32rem]">
+      <div class="flex shadow-md md:-mb-28 mb-20">
+        <div class="flex flex-wrap content-center justify-center sm:rounded-r-none ss:rounded-3xl bg-white w-[24rem] h-[32rem]">
           <div class="w-72">
             <h1 class="text-xl font-semibold">Welcome back</h1>
             <small class="text-gray-400">
@@ -98,7 +98,7 @@ const Login = ({ onLogin }) => {
           </div>
         </div>
 
-        <div class="flex flex-wrap content-center justify-center rounded-r-3xl w-[24rem] h-[32rem]">
+        <div class="hidden sm:block  content-center justify-center rounded-r-3xl w-[24rem] h-[32rem] ">
           <img
             class="w-full h-full bg-center bg-no-repeat bg-cover rounded-r-3xl"
             src="https://images.unsplash.com/photo-1493397212122-2b85dda8106b?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
