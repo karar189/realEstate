@@ -7,14 +7,18 @@ import Card from "../../components/card/Card";
 const Dashboard = () => {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [uploadInput, setUploadInput] = useState("");
+  const [uploadInput, setUploadInput] = useState({
+    title: "",
+    description: "",
+    price: "",
+  });
 
   const handleUpload = (event) => {
     event.preventDefault();
-    if (uploadInput) {
-      setData([...data, { id: data.length, detail: uploadInput }]);
-      setUploadInput("");
-      alert("Data uploaded successfully!"); // Simple confirmation message
+    if (uploadInput.title && uploadInput.description && uploadInput.price) {
+      setData([...data, { id: data.length, ...uploadInput }]);
+      setUploadInput({ title: "", description: "", price: "" });
+      alert("Data uploaded successfully!");
     }
   };
 
@@ -22,34 +26,14 @@ const Dashboard = () => {
     setSearchTerm(event.target.value);
   };
 
-  const filteredData = data.filter((item) =>
-    item.detail.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredData = data.filter(
+    (item) =>
+      item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
     <div className="dashboard">
-      {/* Search Bar */}
-      {/* <div className="search-bar">
-        <input
-          type="text"
-          value={searchTerm}
-          onChange={handleSearch}
-          placeholder="Search data"
-        />
-      </div> */}
-
-      {/* Data Cards */}
-      {/* <div className="data-cards">
-        {filteredData.length > 0 ? (
-          filteredData.map((item) => (
-            <div key={item.id} className="data-card">
-              <p>{item.detail}</p>
-            </div>
-          ))
-        ) : (
-          <p>No Results Found</p>
-        )}
-      </div> */}
       <div className="heroSection ">
         <div
           className={`bg-[#073a55] flex justify-between ${styles.marginX}  ${styles.paddingX} ${styles.paddingY} h-[80vh] rounded-3xl `}
@@ -84,17 +68,50 @@ const Dashboard = () => {
         </div>
       </div>
       <div className="formSection">
-        {" "}
-        {/* Data Upload Form */}
-        <div className="data-upload-form">
-          <form onSubmit={handleUpload}>
+        <div
+          className={`data-upload-form ${styles.marginX} ${styles.marginY} py-20 `}
+        >
+          <form onSubmit={handleUpload} className="flex flex-col ">
+            <h1
+              className={`${styles.subheading} text-amber-500 mb-4 font-semibold`}
+            >
+              Upload Property
+            </h1>
             <input
               type="text"
-              value={uploadInput}
-              onChange={(e) => setUploadInput(e.target.value)}
-              placeholder="Enter data"
+              value={uploadInput.title}
+              onChange={(e) =>
+                setUploadInput({ ...uploadInput, title: e.target.value })
+              }
+              placeholder="Enter title"
+              className="px-4 py-3 w-[400px] rounded-xl"
             />
-            <button type="submit">Upload Data</button>
+            <br />
+            <textarea
+              value={uploadInput.description}
+              onChange={(e) =>
+                setUploadInput({ ...uploadInput, description: e.target.value })
+              }
+              placeholder="Enter description"
+              className="px-4 py-3 w-[400px] rounded-xl"
+            />
+            <br />
+            <input
+              type="text"
+              value={uploadInput.price}
+              onChange={(e) =>
+                setUploadInput({ ...uploadInput, price: e.target.value })
+              }
+              placeholder="Enter price"
+              className="px-4 py-3 w-[400px] rounded-xl"
+            />
+            <br />
+            <button
+              className="px-4 py-3 w-[400px] rounded-xl bg-amber-500 text-white"
+              type="submit"
+            >
+              Upload Data
+            </button>
           </form>
         </div>
       </div>

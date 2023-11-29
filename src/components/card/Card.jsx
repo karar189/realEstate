@@ -16,19 +16,12 @@ const Card = ({ data }) => {
               />
               <div className="w-80  bg-white rounded-b-3xl shadow border border-sky-500">
                 <h2 className=" text-lg font-bold px-6 py-4">
-                  {item.detail}
+                  {item.title}
                   {/* {data[0].name} */}
                 </h2>
-                <p className="px-6 ">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  quisquam incidunt velit aliquam deleniti id ea!
-                  {/* {item.description} */}
-                </p>
+                <p className="px-6 ">{item.description}</p>
                 <br />
-                <p className="px-6 pb-4">
-                  {/* {data[0].price} */}
-                  $400
-                </p>
+                <p className="px-6 pb-4">${item.price}</p>
               </div>
             </div>
           </div>
