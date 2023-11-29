@@ -55,11 +55,14 @@ const Dashboard = () => {
                 className="px-4 py-6 w-[800px] rounded-xl absolute z-10"
               />
             </div>
-            <p
-              className={`${styles.subheading} text-[#073a55] mt-40 bg-amber-400 rounded-xl py-3 w-96 px-4`}
-            >
-              <b>Or,</b> Add Your Own Listing Today!
-            </p>
+            <a href="#upload">
+              {" "}
+              <p
+                className={`${styles.subheading} text-[#073a55] mt-40 bg-amber-400 rounded-xl py-3 w-96 px-4`}
+              >
+                <b>Or,</b> Add Your Own Listing Today!
+              </p>
+            </a>
           </div>
           <div className="image  relative">
             <div className="bg-white  rounded-2xl shadow-2xl">
@@ -153,6 +156,7 @@ const Dashboard = () => {
       </div>
       <div className="formSection mt-20">
         <div
+          id="upload"
           className={`data-upload-form ${styles.marginX} ${styles.marginY}  flex justify-between `}
         >
           <form onSubmit={handleUpload} className="flex flex-col ">
