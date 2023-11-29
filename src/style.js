@@ -5,6 +5,8 @@ const styles = {
   subheading:
     " md:text-[22px] text-[18px] text-white md:leading-[30.8px] leading-[38.8px] w-full",
 
+  logo: " md:text-[32px] text-[18px] text-white md:leading-[30.8px] leading-[38.8px] w-full",
+
   paragraph:
     "font-poppins font-extralight text-red md:text-[16px] text-[14px] md:leading-[30.8px] leading-[26.8px] ",
 
