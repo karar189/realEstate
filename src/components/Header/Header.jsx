@@ -60,6 +60,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+      {/* Mobile View */}
       <div className="sm:hidden block ">
         <div className="flex justify-between w-full px-12 mt-10">
           <a href="/" className="-ml-6">

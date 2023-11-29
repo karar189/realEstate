@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "../../style";
 
-import hero from "../../assets/images/hero.avif";
 import Card from "../../components/card/Card";
 import Hero from "../../components/Hero/Hero";
 import Form from "../../components/Form/Form";
